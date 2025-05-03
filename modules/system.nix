@@ -37,6 +37,7 @@
     lxqt.lxqt-policykit
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     hyprlandPlugins.hyprscroller
+    kdePackages.kio-admin
   ];
 
   fonts.packages = [

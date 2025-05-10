@@ -18,6 +18,9 @@
     gnome-disk-utility
     nerdfetch
     wget
+    
+    #web
+    brave
 
     #archives
     zip

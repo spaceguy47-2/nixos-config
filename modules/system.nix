@@ -38,7 +38,12 @@
     inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default
     hyprlandPlugins.hyprscroller
     kdePackages.kio-admin
+    udisks2
+    gvfs
   ];
+
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono

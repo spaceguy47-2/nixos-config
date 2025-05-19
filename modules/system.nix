@@ -40,6 +40,9 @@
     kdePackages.kio-admin
     udisks2
     gvfs
+    tmux
+    steam-run
+    wineWowPackages.staging
   ];
 
   services.gvfs.enable = true;

@@ -21,8 +21,7 @@ in
 
     enabledSnippets = [
       ''
-        /* Hide lyrics button in playbar */
-        .main-nowPlayingBar-lyricsButton { display: none; }
+
       ''
     ];
   };

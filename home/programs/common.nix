@@ -10,7 +10,6 @@
     kdePackages.ark
 
     #productivity
-    neovim
     obsidian
     thunderbird
 
@@ -18,7 +17,14 @@
     gnome-disk-utility
     nerdfetch
     wget
+    grim
+    slurp
+    wl-clipboard
+    audacity
     
+    #java
+    jdk17
+
     #web
     brave
 
@@ -27,6 +33,7 @@
     xz
     unzip
     p7zip
+    unrar
 
     #hyprland stuff
     hyprpanel
@@ -35,5 +42,8 @@
 
     #other
     vesktop
+    davinci-resolve
+    ollama-rocm
+    obs-studio
   ];
 }

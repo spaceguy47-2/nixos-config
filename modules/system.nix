@@ -27,6 +27,24 @@
   #enable flatpaks
   services.flatpak.enable = true;
 
+  hardware.opentabletdriver.enable = true;
+
+  services.open-webui.enable = true;
+
+  virtualisation.waydroid.enable = true;
+
+  services.tailscale.enable = true;
+
+  services.avahi.publish.enable = true;
+  services.avahi.publish.userServices = true;
+
+  programs.nix-ld.enable = true;
+
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   environment.systemPackages = with pkgs; [
     wget
     curl
@@ -43,10 +61,24 @@
     tmux
     steam-run
     wineWowPackages.staging
+    python314
+    sunshine
+    libgccjit
   ];
+
+  security.wrappers.sunshine = {
+    owner = "root";
+    group = "root";
+    capabilities = "cap_sys_admin+p";
+    source = "${pkgs.sunshine}/bin/sunshine";
+  };
 
   services.gvfs.enable = true;
   services.udisks2.enable = true;
+
+  programs.neovim.plugins = [
+    pkgs.vimPlugins.nvim-treesitter
+  ];
 
   fonts.packages = [
     pkgs.nerd-fonts.jetbrains-mono

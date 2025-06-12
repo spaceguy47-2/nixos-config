@@ -11,7 +11,7 @@
       
       ../../modules/system.nix
       
-      #../../modules/flatpak.nix
+      ../../modules/flatpak.nix
     ];
 
   # Bootloader.
@@ -21,11 +21,22 @@
   networking.hostName = "SantiPC"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 47984 47989 47990 48010 ];
+    allowedUDPPortRanges = [
+      { from = 47998; to = 48000; }
+      #{ from = 8000; to = 8010; }
+    ];
+  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  hardware.amdgpu.opencl.enable = true;
 
 }
